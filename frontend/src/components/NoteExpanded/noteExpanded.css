@@ -1,0 +1,17 @@
+textarea {
+    width: 100%;
+    height: auto !important;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 16px;
+    resize: none;
+}
+
+.head-note {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

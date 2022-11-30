@@ -1,0 +1,37 @@
+.note {
+    position: relative;
+    background-color: #caffbf;
+    padding: 1rem;
+    border-radius: 5px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.note-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.note:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 12px 12px 0;
+    border-style: solid;
+    border-color: #ffffff #ffffff #658e15 #658e15;
+    background: #658e15;
+    box-shadow: 0 0 0 0, -3px 3px 3px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

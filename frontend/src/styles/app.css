@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.container {
+    maxWidth: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.modal-content {
+    margin: 30px;
+    self-align: center;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+}
