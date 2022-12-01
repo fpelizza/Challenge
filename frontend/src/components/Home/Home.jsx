@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { nanoid } from "nanoid";
+import { useState } from "react";
 import "../../styles/app.css";
 import NoteList from "../NoteList/NoteList";
 import Modal from "react-modal";

@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
 const ArchivePage = ({ notes, handleArchiveNote }) => {
-    var notesToShow = notes.filter((note) => note.archive === true);
-
     return (
         <div className="container">
             <div className="top-bar">

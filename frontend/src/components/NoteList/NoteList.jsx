@@ -1,12 +1,17 @@
 import Note from "../Note/Note";
 import "./noteList.css";
 
-const NoteList = ({ notes, handleDeleteNote, handleArchiveNote, handleUpdateNote }) => {
+const NoteList = ({
+    notes,
+    handleDeleteNote,
+    handleArchiveNote,
+    handleUpdateNote,
+}) => {
     return (
         <div className="note-list">
             {notes
                 .filter((note) => note.archived === false)
-                .sort((a,b)=>a.date > b.date)
+                .sort((a, b) => a.date > b.date)
                 .map((note) => (
                     <li key={note.id}>
                         <Note

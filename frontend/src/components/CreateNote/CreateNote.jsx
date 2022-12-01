@@ -2,24 +2,20 @@ import React, { useState } from "react";
 import "./createNote.css";
 import "../../styles/buttons.css";
 
-const CreateNote = ({ notes, handleAddNote, handleClose }) => {
+const CreateNote = ({ handleAddNote, handleClose }) => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
-
-    const handleSubmit = () => {
-        console.log("title" + title + " content " + content);
-    };
 
     return (
         <div>
             <div className="top-note">
-                <h1>Create/Edit note</h1>
+                <h1>Create note</h1>
                 <button
                     className="button green"
                     onClick={() => {
                         handleAddNote(title, content);
-                        setTitle('');
-                        setContent('');
+                        setTitle("");
+                        setContent("");
                     }}
                 >
                     Save
@@ -28,21 +24,21 @@ const CreateNote = ({ notes, handleAddNote, handleClose }) => {
                     Cancel
                 </button>
             </div>
-            <form onSubmit={handleSubmit} className="form-container">
+            <form className="form-container">
                 <textarea
                     className="user-input title"
                     type="text"
                     name="title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    placeholder="title"
+                    placeholder="Title of the note..."
                 />
                 <textarea
                     className="user-input content"
                     type="text"
                     name="content"
                     value={content}
-                    placeholder="content"
+                    placeholder="Content of the note..."
                     onChange={(e) => setContent(e.target.value)}
                 />
             </form>

@@ -1,6 +1,5 @@
 import Note from "../Note/Note";
 import "../NoteList/noteList.css";
-import formatDate from "@bitty/format-date";
 
 const ArchiveNoteList = ({ notes, handleArchiveNote }) => {
     return (

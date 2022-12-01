@@ -3,6 +3,7 @@ h1 {
     color: #011627;
     font-size: 40px;
 }
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -15,7 +16,6 @@ h1 {
     border: 1px solid black;
     border-radius: 3px;
     resize: none !important;
-    text-transform: uppercase;
     font-size: 12px;
     font-family: sans-serif;
     background-color: #f9f6f2;

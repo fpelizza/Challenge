@@ -1,5 +1,3 @@
-import "./App.css";
-import { nanoid } from "nanoid";
 import React, { useCallback, useEffect, useState } from "react";
 import Home from "../src/components/Home/Home";
 import ArchivePage from "./components/ArchivePage/ArchivePage";
@@ -53,7 +51,8 @@ const App = () => {
             .then(fetchData);
     };
 
-    const deleteItem = useCallback((id) => {
+    const deleteItem = useCallback((id, event) => {
+        event.preventDefault();
         setNotes((currentNotes) =>
             currentNotes.filter((item) => item.id !== id)
         );
@@ -67,6 +66,7 @@ const App = () => {
             body: JSON.stringify({
                 id: id,
                 content: value,
+                date: new Date(),
             }),
         };
         fetch(`http://localhost:8080/notes/${id}`, requestOptions)
@@ -88,7 +88,8 @@ const App = () => {
             .then(fetchData);
     };
 
-    const archiveItem = useCallback((id, archived) => {
+    const archiveItem = useCallback((id, archived, event) => {
+        event.preventDefault();
         const newState = notes.map((note) => {
             if (note.id === id) {
                 return { id: note.id, archived: !note.archived, ...note };
