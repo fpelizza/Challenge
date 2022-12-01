@@ -10,7 +10,7 @@ const App = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch("http://localhost:3000/notes");
+            const response = await fetch("http://localhost:5000/notes");
             const data = await response.json();
             setNotes(data);
             console.log(data);
@@ -33,7 +33,7 @@ const App = () => {
                 archived: false,
             }),
         };
-        fetch("http://localhost:3000/notes", requestOptions).then((response) =>
+        fetch("http://localhost:5000/notes", requestOptions).then((response) =>
             response.json().then((data) => {
                 setNotes([...notes, data]);
             })
@@ -46,7 +46,7 @@ const App = () => {
             headers: { "Content-Type": "application/json" },
         };
         const response = await fetch(
-            `http://localhost:3000/notes/${id}`,
+            `http://localhost:5000/notes/${id}`,
             requestOptions
         )
             .then((response) => response.json())
@@ -69,7 +69,7 @@ const App = () => {
                 content: value,
             }),
         };
-        fetch(`http://localhost:3000/notes/${id}`, requestOptions)
+        fetch(`http://localhost:5000/notes/${id}`, requestOptions)
             .then((response) => response.json())
             .then(fetchData);
     };
@@ -83,7 +83,7 @@ const App = () => {
                 archived: !archived,
             }),
         };
-        fetch(`http://localhost:3000/notes/${id}`, requestOptions)
+        fetch(`http://localhost:5000/notes/${id}`, requestOptions)
             .then((response) => response.json())
             .then(fetchData);
     };
