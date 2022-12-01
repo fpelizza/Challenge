@@ -5,7 +5,7 @@ import "../../styles/app.css";
 import { Link } from "react-router-dom";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
-const ArchivePage = ({ notes, handleArchiveNote }) => {
+const ArchivePage = ({ notes, handleArchiveNote, handleUpdateNote }) => {
     return (
         <div className="container">
             <div className="top-bar">
@@ -22,6 +22,7 @@ const ArchivePage = ({ notes, handleArchiveNote }) => {
                 <ArchiveNoteList
                     notes={notes}
                     handleArchiveNote={handleArchiveNote}
+                    handleUpdateNote={handleUpdateNote}
                 />
             </div>
         </div>

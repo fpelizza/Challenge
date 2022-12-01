@@ -120,6 +120,7 @@ const App = () => {
                     element={
                         <ArchivePage
                             notes={notes}
+                            handleUpdateNote={updateNote}
                             handleArchiveNote={archiveItem}
                         />
                     }

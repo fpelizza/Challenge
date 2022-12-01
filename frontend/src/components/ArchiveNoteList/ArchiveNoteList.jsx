@@ -1,7 +1,7 @@
 import Note from "../Note/Note";
 import "../NoteList/noteList.css";
 
-const ArchiveNoteList = ({ notes, handleArchiveNote }) => {
+const ArchiveNoteList = ({ notes, handleArchiveNote, handleUpdateNote }) => {
     return (
         <div className="note-list">
             {notes
@@ -12,6 +12,7 @@ const ArchiveNoteList = ({ notes, handleArchiveNote }) => {
                             note={note}
                             archived={note.archived}
                             handleArchiveNote={handleArchiveNote}
+                            handleUpdateNote={handleUpdateNote}
                         />
                     </li>
                 ))}
